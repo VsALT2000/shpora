@@ -1,0 +1,27 @@
+@media (max-width: 500px) {
+    :root {
+        --font-size: 12px
+    }
+
+    .nav>span {
+        display: none;
+    }
+
+    .nav-icon {
+        display: block;
+    }
+
+    footer {
+        height: 110px;
+        flex-direction: column;
+    }
+
+    footer>div {
+        padding: 0;
+        border: 0;
+    }
+
+    main {
+        grid-template-rows: 1fr 110px;
+    }
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Справочник монстров</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/headerStyle.css">
+    <link rel="stylesheet" href="styles/materialsStyle.css">
+    <link rel="stylesheet" href="styles/mobileStyle.css">
+    <link rel="stylesheet" href="styles/textStyle.css">
+    <link rel="stylesheet" href="styles/scrollStyle.css">
+    <link rel="icon" href="/assets/favicon.png" type="image/png">
+</head>
+<body>
+<header>
+    <div>
+        <div class="nav">
+            <span>Статьи</span>
+            <div class="nav-icon"></div>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        Главная страница
+                    </a>
+                </li>
+                <li>
+                    <a href="first.html">
+                        Стоячий призрак
+                    </a>
+                </li>
+                <li>
+                    <a href="second.html">
+                        Призрак-повторюша
+                    </a>
+                </li>
+                <li>
+                    <a href="third.html">
+                        Телепортирующийся призрак
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="search">
+        <label>
+            <input type="text" placeholder="Хочу пройти на Шпору">
+            <button>
+                <img src="assets/icon.png" width="14px" height="14px" alt="Найти">
+            </button>
+        </label>
+    </div>
+</header>
+<main>
+    <div class="body_content_wrapper">
+        <div class="body_container">
+            <h1>Pacman Wiki</h1>
+            <div class="paragraph">
+                <button class="materials" style="float: left; margin: 0 15px 22px 0;">
+                    <img class="item" src="assets/ghosts.png" alt="Все призраки">
+                    <div class="description">Все призраки</div>
+                    <div class="zoom"></div>
+                </button>
+                <div>
+                    Этот сайт посвящён старой доброй игре <a
+                        href="https://www.google.com/search?q=pacman&oq=pacman&aqs=chrome..69i57j46i39j69i59j0i67i131i433j0i67j69i60l3.2489j0j7&sourceid=chrome&ie=UTF-8">"Pacman"</a>а
+                    если быть точнее, её модифицированной версии, соданной специально для отбора людей на <a
+                        href="https://kontur.ru/education/programs/shpora">Шпору</a>.
+                </div>
+                <div>
+                    Задача участника - запрограммировать Пакмана таким образом, чтобы он смог съесть все точки в
+                    лабиринте, избегая встречи с привидениями, которые гоняются за ним. Всего есть четыре уровня
+                    сложности, которые отличаются только наличием призраков, сложностью их алгоритмов, а так же
+                    архитектурой лабиринта.
+                </div>
+            </div>
+            <div class="paragraph">
+                <h2 id="aboutGame">Игровой процесс</h2>
+                <div>
+                    Экран игры занимает собой лабиринт, коридоры которого заполнены точками. Пакману необходимо съесть
+                    все точки в лабиринте, избегая встречи с привидениями, которые гоняются за ним. Если привидение
+                    дотронется до Пакмана, то игра заканчивается поражением. После съедения всех точек начинается
+                    появляется заветная надпись "WIN". Кроме того, возможен вариант, в котором пакман зациклится,
+                    исчерпав все свои ходы. Такой исход обозначается "PLAYING". По краям лабиринта могут находятся
+                    проходы, при вхождении в который Пакман выходит с другой стороны лабиринта.
+                </div>
+            </div>
+            <div class="paragraph">
+                <h2 id="level1">Учимся ходить</h2>
+                <button class="materials" style="float: right; margin: 0 0 22px 15px;">
+                    <img class="item" src="assets/lineMap.jpg" alt="Первый уровень">
+                    <div class="description">Первый уровень</div>
+                    <div class="zoom"></div>
+                </button>
+                <div>
+                    На этом уровне требуется написать функцию, которая будет вызываться на каждую игровую итерацию
+                    вместе с текущим состоянием игры. Наша задача — вернуть желаемое направление пакмана, чтобы он как
+                    можно быстрее съел ягодки.
+                </div>
+                <div>
+                    Как мы уже знаем, Пакман может переходить с одного края карты на другой, это точно нам пригодится.
+                    Это довольно простой уровень, хотя лично я сразу написал для него один алгоритм из 2 части основ
+                    программирования, только не на C#, а на JS.
+                </div>
+            </div>
+            <div class="paragraph">
+                <h2 id="level2">Учимся обходить</h2>
+                <div>
+                    Теперь нас ждут не статичные, а рандомно сгенерированные уровни с монстрами! Монстры стоят на месте.
+                    Обойдя их, мы успешно завершим уровень.
+                </div>
+                <button class="materials" style="float: left; margin: 0 15px 22px 0;">
+                    <img class="item" src="assets/level2.jpg" alt="Второй уровень">
+                    <div class="description">Второй уровень</div>
+                    <div class="zoom"></div>
+                </button>
+                <div>
+                    Как я и говорил выше, тут нам придётся реализовать один очень интересный алгоритм, проверяя при
+                    этом, чтобы пакман не натыкался на призраков. Хорошо, что они не двигаются! Пока не двигаются...
+                </div>
+            </div>
+            <div class="paragraph">
+                <h2 id="level3">Учимся убегать</h2>
+                <button class="materials" style="float: left; margin: 0 15px 22px 0;">
+                    <img class="item" src="assets/level3.jpg" alt="Третий уровень">
+                    <div class="description">Третий уровень</div>
+                    <div class="zoom"></div>
+                </button>
+                <div>
+                    Монстры отрастили лапки и начали бегать за тобой! Спасайся и собери как можно больше вкусняшек!
+                    Уровни опять будут разные, вот пример одного из них. Монстры различаются по цветам и ведут себя
+                    по‑разному, но как именно — отгадай сам ;)
+                </div>
+                <div>
+                    Ну тут я сразу полез в файлы игры и начал смотреть, из чего вообще состоит уровень. Оказалось, что
+                    там есть вся необходимая информация, а именно маршрут призрака. Так я думал сначала. А потом
+                    оказалось, что мне всё это не нужно и я просто вычислил "мёртвую зону" вокруг призрака, куда пакману
+                    заходить не надо.
+                </div>
+            </div>
+            <div class="paragraph">
+                <h2 id="level4">Учимся побеждать</h2>
+                <button class="materials" style="float: right; margin: 0 0 22px 15px;">
+                    <img class="item" src="assets/level4.png" alt="Лидерборд">
+                    <div class="description">Лидерборд</div>
+                    <div class="zoom"></div>
+                </button>
+                <div>
+                    Настал момент истины! Все монстры округи собрались, чтобы найти твоего героя! Огромное поле,
+                    хитроумные враги и запутанные лабиринты будут тестировать твой алгоритм. Твоя задача — набрать как
+                    можно больше очков. Чтобы увеличить шансы на победу, ограничение по времени на этом уровне выше. На
+                    исследование карты у тебя будет 20 секунд.
+                </div>
+                <div>
+                    Пожалуй, это самая проблемная часть. Тут в работу алгоритма пошло всё, и свап призрака и пакмана
+                    местами, и улучшение алгоритма поиска призраков, и просчитывание возможности столкновения призрака и
+                    пакмана. Так же, на этом уровне имеется <a
+                        href="https://ulearn.me/Analytics/RatingByPoints?courseId=shpora-frontend-2022&slideId=0128dd9a-b00e-45fd-e03e-e1e46375d52d">лидерборд</a>
+                    с баллами, полученными участниками за полседнюю попытку.
+                </div>
+                <div>
+                    На этом, я думаю, данную статью можно закончить. А вы можете ознакомиться с остальными статьями в
+                    данной Wiki.
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <a href="https://vk.com/vsalt">VK</a>
+        </div>
+        <div>
+            <a href="https://github.com/VsALT2000">GitHub</a>
+        </div>
+        <div>
+            <a href="mailto:sergey.k.alt2000@gmail.com">sergey.k.alt2000@gmail.com</a>
+        </div>
+        <div>
+            Copyright © 2022 VsALT
+        </div>
+    </footer>
+</main>
+</body>
+</html>

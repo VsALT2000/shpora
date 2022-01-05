@@ -1,0 +1,53 @@
+.materials {
+    cursor: pointer;
+    position: relative;
+    border: 0;
+    padding: 0;
+    background: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.description {
+    position: absolute;
+    width: 100%;
+    font-size: calc(var(--font-size) - 4px);
+}
+
+.item {
+    border-radius: 10px;
+}
+
+.zoom {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.materials:focus>.description {
+    color: white;
+}
+
+.materials:focus>.item {
+    border-radius: 0;
+}
+
+.zoom:hover {
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 20%;
+    background-position: center;
+    background-image: url("../assets/icon.png");
+}
+
+.materials:focus {
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    height: 80vmin;
+    box-shadow: 0 0 0 100vmax black;
+    background-color: black;
+    z-index: 20;
+}
